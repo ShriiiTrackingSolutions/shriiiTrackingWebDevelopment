@@ -229,10 +229,25 @@
       color: var(--primary);
     }
 
-    /* Work */
-    .work-item { overflow: hidden; border-radius: 0.75rem; aspect-ratio: 16/9; }
-    .work-item img { transition: transform 0.5s ease; width: 100%; height: 100%; object-fit: cover; }
-    .work-item:hover img { transform: scale(1.1); }
+
+.WorkHighlight video{
+  aspect-ratio: 2/1;
+  margin-bottom: -11px;
+}
+.work-item{
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.work-item a{
+  text-decoration: none;
+}
+
+.work-item .card-body{
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 8px;
+}
 
     /* Trust logos */
     .trust-logo {
@@ -313,6 +328,233 @@
 }
 
 
+/* testimonial section css  */
+
+/* Testimonial Section */
+.testimonialSection {
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionSubtext {
+  font-size: 16px;
+  color: #4a5568;
+  margin-bottom: 48px;
+  font-weight: 400;
+}
+
+/* Testimonial Swiper */
+.testimonialSwiper {
+  padding: 20px 0px 34px;
+  position: relative;
+}
+
+/* Testimonial Card */
+.testimonialCard {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 36px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.15);
+  border-color: var(--primary);
+}
+
+/* Quote Icon */
+.quoteIcon {
+  color: #a466ea;
+  opacity: 0.2;
+  margin-bottom: 20px;
+}
+
+/* Testimonial Text */
+.testimonialText {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #3b2d48;
+  margin-bottom: 32px;
+  flex: 1;
+  font-style: italic;
+}
+
+/* Client Info Section */
+.clientInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #e3d7ec;
+}
+
+/* Client Avatar */
+.clientAvatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(186, 102, 234, 0.3);
+}
+
+.clientAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatarFallback {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Client Details */
+.clientDetails {
+  flex: 1;
+}
+
+.clientName {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.clientDesignation {
+  font-size: 14px;
+  color: #a466ea;
+  font-weight: 600;
+  margin: 0 0 2px 0;
+}
+
+
+/* Rating Stars */
+.rating {
+  display: flex;
+  gap: 4px;
+}
+
+.star {
+  color: #fbbf24;
+  font-size: 20px;
+  font-style: normal;
+}
+
+/* Swiper Navigation Buttons */
+.testimonialNext,
+.testimonialPrev {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(to right, var(--primary), #8e5bc9);
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+}
+
+.testimonialNext{
+  top: 32px;
+}
+
+.testimonialPrev{
+  top: 32px;
+  right: 70px;
+  left: unset;
+}
+
+ 
+
+
+.testimonialNext:hover,
+.testimonialPrev:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(175, 102, 234, 0.5);
+}
+
+.testimonialNext::after,
+.testimonialPrev::after {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/* Swiper Pagination */
+.testimonialPagination {
+  top: unset !important;
+  bottom: 0px !important;
+}
+
+.testimonialPagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #cbd5e0;
+  opacity: 1;
+  transition: all 0.3s ease;
+  margin: 0 6px !important;
+}
+
+.testimonialPagination .swiper-pagination-bullet-active {
+  background: linear-gradient(to right, var(--primary), #8e5bc9);
+  width: 32px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(153, 102, 234, 0.4);
+}
+
+
+@media (max-width: 1199.98px) {
+
+.testimonialCard {
+    padding: 36px 32px;
+  }
+  
+  .testimonialText {
+    font-size: 15px;
+  }
+  
+  .clientAvatar {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .avatarFallback {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 991.98px) {
+    .testimonialSwiper {
+    padding: 30px 15px 34px;
+  }
+  
+  .testimonialCard {
+    padding: 32px 28px;
+  }
+  
+  .clientName {
+    font-size: 17px;
+  }
+  
+  .clientDesignation {
+    font-size: 13px;
+  }
+  
+
+}
+
     @media (max-width: 767.98px) {
        .hero-section {
       background: linear-gradient(#000000a6,#000000a6), url('images/HeroBannerMob.webp') center/cover no-repeat;
@@ -321,7 +563,95 @@
     .btn-lg{
       font-size: 16px;
     }
+
+      .testimonialSwiper {
+    padding: 20px 10px 34px;
+  }
+  
+  .testimonialCard {
+    padding: 28px 24px;
+  }
+  
+  .quoteIcon svg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .testimonialText {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  
+  .clientInfo {
+    gap: 12px;
+    padding-top: 16px;
+  }
+  
+  .clientAvatar {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .avatarFallback {
+    font-size: 18px;
+  }
+  
+  .clientName {
+    font-size: 16px;
+  }
+  
+  .testimonialNext,
+  .testimonialPrev {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .testimonialNext::after,
+  .testimonialPrev::after {
+    font-size: 16px;
+  }
+  
+  .star {
+    font-size: 18px;
+  }
+
     }
+
+  @media (max-width: 575.98px) {
+      .testimonialCard {
+    padding: 24px 20px;
+  }
+  
+  .testimonialText {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  
+  .clientInfo {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .rating{
+    justify-content: center;
+    line-height: 16px;
+  }
+  
+  .clientAvatar {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto;
+  }
+  
+  .testimonialNext,
+  .testimonialPrev {
+    display: none;
+  }
+
+  }
 
   </style>
 </head>
@@ -377,7 +707,7 @@
 <!-- Trusted by local businesses Section -->
 <section class="trustedByClients py-5">
   <div class="container-fluid g-0">
-      <h2 class="text-center text-uppercase text-secondary fw-semibold small mb-4">Trusted by local businesses in Vadodara</h2>
+      <h2 class="text-center text-uppercase text-secondary fw-semibold small mb-4">Brands That Believe in Our Work</h2>
     <div class="swiper clientsSwiper">
       <div class="swiper-wrapper">
         
@@ -492,7 +822,7 @@
     </section>
 
     <!-- Work -->
-    <section id="work" class="py-5 mt-lg-5 mt-0">
+    <section id="work" class="py-5 mt-lg-5 mt-0 WorkHighlight">
       <h2 class="text-center fw-bold fs-2 mb-3">Work Highlights</h2>
       <p class="text-center text-secondary mb-5 mx-auto col-lg-8" >
         A glimpse at recent builds—clear value messaging, fast loads, and CTAs that move visitors forward.
@@ -500,35 +830,85 @@
 
       <div class="row g-4">
         <div class="col-sm-6 col-lg-4">
-          <div class="work-item">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlOe_GVnrPurhnZ1uZMXsId0XSRy_3wtwS63fSSQ2TU_PBw-buooOMBEqYjFHqhmLBCCDDyWwrN5yhcNpukYaAdVGwHc2tjjKvaDKPiC3IfP1M32ydYGTO8XrvDrwtgRXu6qce9g9aG9eAC8_f8-3wQvyDQSpDfVagtd5Tw2sVHR3BFfU1bZz1kP6mueFfrRK4eehq3vyqVGaDX89zvc3mOtAUXYMP1z_MjGkzjvzPqjdbrMNfJKcTb8wWv5bq9hAXL2N8PT5OsJN9" alt="Cafe website project preview">
+          <div class="work-item shadow-sm ">
+           <a target="_blank" href="https://www.lifelensinterior.com/">
+            <video class="card-img" autoplay="" muted="true" loop="true" playsinline="" >
+            <source src="images/httpswww.lifelensinterior.com.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="card-body text-center">
+            <h3 class="card-title h5 mb-0">lifelensinterior</h3>
+          </div>
+           </a>
           </div>
         </div>
         <div class="col-sm-6 col-lg-4">
-          <div class="work-item">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlOe_GVnrPurhnZ1uZMXsId0XSRy_3wtwS63fSSQ2TU_PBw-buooOMBEqYjFHqhmLBCCDDyWwrN5yhcNpukYaAdVGwHc2tjjKvaDKPiC3IfP1M32ydYGTO8XrvDrwtgRXu6qce9g9aG9eAC8_f8-3wQvyDQSpDfVagtd5Tw2sVHR3BFfU1bZz1kP6mueFfrRK4eehq3vyqVGaDX89zvc3mOtAUXYMP1z_MjGkzjvzPqjdbrMNfJKcTb8wWv5bq9hAXL2N8PT5OsJN9" alt="Fashion e‑commerce storefront preview">
+          <div class="work-item shadow-sm ">
+           <a target="_blank" href="https://www.kads.co.in/">
+            <video class="card-img" autoplay="" muted="true" loop="true" playsinline="" >
+            <source src="images/httpswww.kads.co.in.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="card-body text-center">
+            <h3 class="card-title h5 mb-0">KADS Interior Design</h3>
+          </div>
+           </a>
           </div>
         </div>
         <div class="col-sm-6 col-lg-4">
-          <div class="work-item">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlOe_GVnrPurhnZ1uZMXsId0XSRy_3wtwS63fSSQ2TU_PBw-buooOMBEqYjFHqhmLBCCDDyWwrN5yhcNpukYaAdVGwHc2tjjKvaDKPiC3IfP1M32ydYGTO8XrvDrwtgRXu6qce9g9aG9eAC8_f8-3wQvyDQSpDfVagtd5Tw2sVHR3BFfU1bZz1kP6mueFfrRK4eehq3vyqVGaDX89zvc3mOtAUXYMP1z_MjGkzjvzPqjdbrMNfJKcTb8wWv5bq9hAXL2N8PT5OsJN9" alt="Tech corporate website preview">
+          <div class="work-item shadow-sm ">
+           <a target="_blank" href="https://www.highwayhopper.com/">
+            <video class="card-img" autoplay="" muted="true" loop="true" playsinline="" >
+            <source src="images/httpswww.highwayhopper.com.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="card-body text-center">
+            <h3 class="card-title h5 mb-0">Highway Hopper</h3>
+          </div>
+           </a>
           </div>
         </div>
         <div class="col-sm-6 col-lg-4">
-          <div class="work-item">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlOe_GVnrPurhnZ1uZMXsId0XSRy_3wtwS63fSSQ2TU_PBw-buooOMBEqYjFHqhmLBCCDDyWwrN5yhcNpukYaAdVGwHc2tjjKvaDKPiC3IfP1M32ydYGTO8XrvDrwtgRXu6qce9g9aG9eAC8_f8-3wQvyDQSpDfVagtd5Tw2sVHR3BFfU1bZz1kP6mueFfrRK4eehq3vyqVGaDX89zvc3mOtAUXYMP1z_MjGkzjvzPqjdbrMNfJKcTb8wWv5bq9hAXL2N8PT5OsJN9" alt="Photographer portfolio website preview">
+          <div class="work-item shadow-sm ">
+           <a target="_blank" href="https://moonlightrestoandcafe.com/">
+            <video class="card-img" autoplay="" muted="true" loop="true" playsinline="" >
+            <source src="images/httpsmoonlightrestoandcafe.com.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="card-body text-center">
+            <h3 class="card-title h5 mb-0">Moonligght Restaurant</h3>
+          </div>
+           </a>
           </div>
         </div>
         <div class="col-sm-6 col-lg-4">
-          <div class="work-item">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlOe_GVnrPurhnZ1uZMXsId0XSRy_3wtwS63fSSQ2TU_PBw-buooOMBEqYjFHqhmLBCCDDyWwrN5yhcNpukYaAdVGwHc2tjjKvaDKPiC3IfP1M32ydYGTO8XrvDrwtgRXu6qce9g9aG9eAC8_f8-3wQvyDQSpDfVagtd5Tw2sVHR3BFfU1bZz1kP6mueFfrRK4eehq3vyqVGaDX89zvc3mOtAUXYMP1z_MjGkzjvzPqjdbrMNfJKcTb8wWv5bq9hAXL2N8PT5OsJN9" alt="Real estate listing website preview">
+          <div class="work-item shadow-sm ">
+           <a target="_blank" href="https://havyawomenshospital.com/">
+            <video class="card-img" autoplay="" muted="true" loop="true" playsinline="" >
+            <source src="images/httpshavyawomenshospital.com.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="card-body text-center">
+            <h3 class="card-title h5 mb-0">Havya Women's Hospital</h3>
+          </div>
+           </a>
           </div>
         </div>
         <div class="col-sm-6 col-lg-4">
-          <div class="work-item">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlOe_GVnrPurhnZ1uZMXsId0XSRy_3wtwS63fSSQ2TU_PBw-buooOMBEqYjFHqhmLBCCDDyWwrN5yhcNpukYaAdVGwHc2tjjKvaDKPiC3IfP1M32ydYGTO8XrvDrwtgRXu6qce9g9aG9eAC8_f8-3wQvyDQSpDfVagtd5Tw2sVHR3BFfU1bZz1kP6mueFfrRK4eehq3vyqVGaDX89zvc3mOtAUXYMP1z_MjGkzjvzPqjdbrMNfJKcTb8wWv5bq9hAXL2N8PT5OsJN9" alt="Travel booking site preview">
+          <div class="work-item shadow-sm ">
+           <a target="_blank" href="https://interiostyle.co.in/">
+            <video class="card-img" autoplay="" muted="true" loop="true" playsinline="" >
+            <source src="images/httpsinteriostyle.co.in.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="card-body text-center">
+            <h3 class="card-title h5 mb-0">Interio Style</h3>
+          </div>
+           </a>
           </div>
         </div>
+
+
       </div>
     </section>
 
@@ -559,37 +939,152 @@
       </div>
     </section>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="py-5">
-      <h2 class="text-center fw-bold fs-2 mb-3">Client Testimonials</h2>
-      <p class="text-center text-secondary mb-4">Short, authentic quotes placed near CTAs help visitors act with confidence.</p>
 
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="p-4 bg-white border h-100 rounded-3">
-            <p class="mb-2">“Clear plan, on‑time delivery, and a faster site—our leads improved within weeks.”</p>
-            <p class="mb-0 small text-muted">Local Retailer, Vadodara</p>
+
+<section class="testimonialSection py-5">
+
+    <h2 class="text-center fw-bold fs-2 mb-3">Client Testimonials</h2>
+    
+    <!-- Swiper Testimonial Carousel -->
+    <div class="swiper testimonialSwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Testimonial 1 -->
+        <div class="swiper-slide">
+          <div class="testimonialCard">
+            <div class="quoteIcon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 8C10 8 9 9 9 12C9 15 10 16 10 16H7C7 16 4 15 4 12C4 9 7 4 7 4L10 7V8Z" fill="currentColor"/>
+                <path d="M19 8C19 8 18 9 18 12C18 15 19 16 19 16H16C16 16 13 15 13 12C13 9 16 4 16 4L19 7V8Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <p class="testimonialText">"Shriii Tracking Solution provides an effective, budget-friendly platform for local business promotion. Ideal for small businesses, it offers targeted ads and valuable exposure. Keep up the great work, and best of luck in your future endeavors."</p>
+            <div class="clientInfo">
+              <div class="clientAvatar">
+                
+                <span class="avatarFallback"><img src="images/sb.png" alt="SB Bird Netting Solution"></span>
+              </div>
+              <div class="clientDetails">
+                <h3 class="clientName">Brijesh Singh</h3>
+                <p class="clientDesignation">SB Bird Netting Solution</p>
+              </div>
+            </div>
+            <div class="rating">
+              <i class="star">★</i>
+              <i class="star">★</i>
+              <i class="star">★</i>
+              <i class="star">★</i>
+              <i class="star">★</i>
+            </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="p-4 bg-white border h-100 rounded-3">
-            <p class="mb-2">“They simplified our product pages and checkout; conversions went up noticeably.”</p>
-            <p class="mb-0 small text-muted">D2C Brand, Gujarat</p>
+        <!-- Testimonial 2 -->
+        <div class="swiper-slide">
+          <div class="testimonialCard">
+            <div class="quoteIcon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 8C10 8 9 9 9 12C9 15 10 16 10 16H7C7 16 4 15 4 12C4 9 7 4 7 4L10 7V8Z" fill="currentColor"/>
+                <path d="M19 8C19 8 18 9 18 12C18 15 19 16 19 16H16C16 16 13 15 13 12C13 9 16 4 16 4L19 7V8Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <p class="testimonialText">"Shriii Tracking Solution is the go-to platform for finding the right products in Baroda. Excellent service—keep up the great work!"</p>
+            <div class="clientInfo">
+              <div class="clientAvatar">
+                
+                <span class="avatarFallback"><img src="images/ASHA_INDUSTRIES.png" alt="Asha Industries"></span>
+              </div>
+              <div class="clientDetails">
+                <h3 class="clientName">Maulin Amin</h3>
+                <p class="clientDesignation">Asha Industries</p>
+              </div>
+            </div>
+            <div class="rating">
+              <i class="star">★</i>
+              <i class="star">★</i>
+              <i class="star">★</i>
+              <i class="star">★</i>
+              <i class="star">★</i>
+            </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="p-4 bg-white border h-100 rounded-3">
-            <p class="mb-2">“Great communication and post‑launch support made the rollout stress‑free.”</p>
-            <p class="mb-0 small text-muted">Education Services, Vadodara</p>
+        <!-- Testimonial 3 -->
+        <div class="swiper-slide">
+          <div class="testimonialCard">
+            <div class="quoteIcon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 8C10 8 9 9 9 12C9 15 10 16 10 16H7C7 16 4 15 4 12C4 9 7 4 7 4L10 7V8Z" fill="currentColor"/>
+                <path d="M19 8C19 8 18 9 18 12C18 15 19 16 19 16H16C16 16 13 15 13 12C13 9 16 4 16 4L19 7V8Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <p class="testimonialText">"Shriii Tracking Solution stands out as one of Baroda's premier platforms for digital advertising. With a vibrant community and exceptional support from their dedicated team, the service truly excels. Keep up the great work and continue to thrive!"</p>
+            <div class="clientInfo">
+              <div class="clientAvatar">
+                
+                <span class="avatarFallback"><img src="images/AkaayEnterprise.png" alt="Akaay Enterprise"></span>
+              </div>
+              <div class="clientDetails">
+                <h3 class="clientName">Ruchit chaudhary</h3>
+                <p class="clientDesignation">Akaay Enterprise</p>
+              </div>
+            </div>
+            <div class="rating">
+              <i class="star">★</i>
+              <i class="star">★</i>
+              <i class="star">★</i>
+              <i class="star">★</i>
+              <i class="star">★</i>
+            </div>
           </div>
         </div>
+        <!-- Testimonial 4 -->
+        <div class="swiper-slide">
+          <div class="testimonialCard">
+            <div class="quoteIcon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 8C10 8 9 9 9 12C9 15 10 16 10 16H7C7 16 4 15 4 12C4 9 7 4 7 4L10 7V8Z" fill="currentColor"/>
+                <path d="M19 8C19 8 18 9 18 12C18 15 19 16 19 16H16C16 16 13 15 13 12C13 9 16 4 16 4L19 7V8Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <p class="testimonialText">"Shriii Tracking Solution is an outstanding platform for digital advertising in Baroda, offering effective tools for business growth. Highly recommended!"</p>
+            <div class="clientInfo">
+              <div class="clientAvatar">
+                
+                <span class="avatarFallback"><img src="images/shoot_with_Priyank.png" alt="Shoot With Priyank"></span>
+              </div>
+              <div class="clientDetails">
+                <h3 class="clientName">Priyank Tandel</h3>
+                <p class="clientDesignation">Shoot With Priyank</p>
+              </div>
+            </div>
+            <div class="rating">
+              <i class="star">★</i>
+              <i class="star">★</i>
+              <i class="star">★</i>
+              <i class="star">★</i>
+              <i class="star">★</i>
+            </div>
+          </div>
+        </div>
+
+
       </div>
-    </section>
+      
+      <!-- Navigation Buttons -->
+      <div class="swiper-button-next testimonialNext"></div>
+      <div class="swiper-button-prev testimonialPrev"></div>
+      
+      <!-- Pagination -->
+      <div class="swiper-pagination testimonialPagination"></div>
+    </div>
+
+</section>
+
+
 
     <!-- CTA band -->
     <section class="py-5 my-lg-5 my-0">
       <div class="cta-section text-center text-white p-lg-5 p-4">
-        <h2 class="fw-bold fs-1 mb-3">Let's Build Your Vadodara Website</h2>
+        <h2 class="fw-bold fs-1 mb-3">Let's Build Your Website</h2>
         <p class="mb-4 mx-auto col-lg-8" >
           Get a free, no‑obligation strategy call with practical recommendations tailored to your goals.
         </p>
@@ -707,7 +1202,7 @@
 
   <!-- Footer -->
   <footer class="border-top mt-lg-5 mt-0">
-    <div class="container py-5">
+    <div class="container pt-5">
       <div class="row g-4">
         <div class="col-md-4">
           <div class="d-flex align-items-center mb-3 footerBrand">
@@ -744,7 +1239,7 @@
         </div>
       </div>
 
-      <div class="text-center pt-4 mt-4 border-top">
+      <div class="text-center py-4 mt-4 border-top">
         <p class="small text-secondary mb-0">© 2025 Shriii Tracking Solution. All Rights Reserved.</p>
       </div>
     </div>
@@ -780,7 +1275,39 @@ const clientsSwiper = new Swiper(".clientsSwiper", {
       slidesPerView: 6, // desktop
     },
   },
+}); 
+
+
+// Initialize Testimonial Swiper
+const testimonialSwiper = new Swiper('.testimonialSwiper', {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+  pagination: {
+    el: '.testimonialPagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.testimonialNext',
+    prevEl: '.testimonialPrev',
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    }
+  }
 });
+
   </script>
 </body>
 </html>
