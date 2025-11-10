@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shriiitrackingsolutions.github.io/shriiiTrackingWebDevelopment/sitemap.xml
